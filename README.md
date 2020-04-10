@@ -19,7 +19,7 @@
 
 ### II. Function List
 
-##### Functions from <ctype.h> library
+#### Functions from <ctype.h> library
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 | ft_isalnum | int ft_isalnum(int c)  |  checks for an alphanumeric character |
@@ -30,13 +30,13 @@
 | ft_tolower | int ft_tolower(int c)  |  upper case to lower case letter conversion |
 | ft_toupper | ft_toupper(int c)  |  lower case to upper case letter conversion |
 
-##### Functions from <stdlib.h> library
+#### Functions from <stdlib.h> library
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 |ft_atoi | int ft_atoi(const char *str)| convert ASCII string to an integer |
 |ft_calloc | void *ft_calloc(size_t countsize_t size)| allocates size bytes and returns a pointer to the allocated memory
 
-##### Functions from <string.h> library
+#### Functions from <string.h> library
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 |ft_strlen|size_t ft_strlen(const char *s)| calculates the length of the string s, excluding the terminating null byteg|
@@ -48,7 +48,7 @@
 |ft_strncmp|int ft_strncmp(const char *s1, const char *s2, size_t n)| compares the two strings s1 and s2. It returns an integer less than, equal to, or greater than zero if s1 is found, respectively, to be less than, to match, or be greater than s2|
 |ft_strdup|char *ft_strdup(const char *s1)| returns a pointer to a new string which is a duplicate of the string s|
 
-##### Functions from <strings.h> library
+#### Functions from <strings.h> library
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 |ft_bzero|void ft_bzero(void *s, size_t n)| erases the data in the n bytes of the memory starting at the location pointed to by s, by writing zeroes (bytes containing '\0') to that area|
@@ -59,7 +59,7 @@
 |ft_memcmp|int  ft_memcmp(const void *s1, const void *s2, size_t n)| returns an integer less than, equal to, or greater than zero if the first n bytes of s1 is found, respectively, to be less than, to match, or be greater than the first n bytes of s2|
 |ft_memmove|void *ft_memmove(void *dst, const void *src, size_t len)| function copies n bytes from memory area src to memory area dest. The memory areas may overlap: copying takes place as though the bytes in src are first copied into a temporary array that does notoverlap src or dest, and the bytes are then copied from the temporary array to dest|
 
-##### Non-standard functions
+#### Non-standard functions
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 |ft_substr|char *ft_substr(char const *s, unsigned int start, size_t len)|allocates (with malloc) and returns a substring from the string 's'. The substring begins at index 'start' and is of maximum size 'len'
@@ -73,7 +73,7 @@
 |ft_putendl_fd|void ft_putendl_fd(char *s, int fd)|outputs the string 's' to the given file descriptor, followed by a newline
 |ft_putnbr_fd|void ft_putnbr_fd(int n, int fd)|outputs the integer 'n' to the given file descriptor
 
-##### Linked list functions
+#### Linked list functions
 |  Function | Synopsis  | Description |
 | ------------ | ------------ | ------------ |
 |ft_lstnew|t_list *ft_lstnew(void *content)| allocates (with malloc) and returns a new element. The variable 'content' is initialized with the value of the parameter 'content'. The variable 'next' is initialized to NULL.|
