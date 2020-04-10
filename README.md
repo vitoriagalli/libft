@@ -1,21 +1,29 @@
 # LIBFT
-
+![](https://img.shields.io/badge/Language-C-blue)
+![](https://img.shields.io/badge/School-42-black)
 ### I. How to use libft in you project:
 <p>
-- <i>Compile</i>
+<i>Clone repository</i>
+<ol>
+	git clone https://github.com/vscabell/libft.git<br />
+</ol>
+<p>
+<i>Compile</i>
 <ol>
 	run make to compile libft.a<br />
+	run make bonus to add bonus functions to the library<br />
 	run make clean to delete tmp files after compile (only libft.a will be remain)<br />
 	run make fclean to delete all files after compile<br />
 	run make re to recompile all files<br />
 </ol>
 <p>
-- <i>Include</i>
+<i>Include</i>
 <ol>
 	#include "libft.h" in your project<br />
 	compile libft.a<br />
 	link you binary with -L. -lft flag<br />
 </ol>
+	
 
 ### II. Function List
 
