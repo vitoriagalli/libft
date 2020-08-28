@@ -1,6 +1,7 @@
 # LIBFT
 ![](https://img.shields.io/badge/Language-C-blue)
 ![](https://img.shields.io/badge/School-42-black)
+
 ### I. How to use libft in you project:
 <p>
 <i>Clone repository</i>
@@ -11,7 +12,6 @@
 <i>Compile</i>
 <ol>
 	run make to compile libft.a<br />
-	run make bonus to add bonus functions to the library<br />
 	run make clean to delete tmp files after compile (only libft.a will be remain)<br />
 	run make fclean to delete all files after compile<br />
 	run make re to recompile all files<br />
@@ -21,9 +21,9 @@
 <ol>
 	#include "libft.h" in your project<br />
 	compile libft.a<br />
-	link you binary with -L. -lft flag<br />
+	link you binary with -L./$(lib_path) -lft flag<br />
 </ol>
-	
+
 
 ### II. Function List
 
@@ -93,3 +93,5 @@
 |ft_lstclear|void ft_lstclear(t_list **lst, void (*del)(void*))| deletes and frees the given element and every successor of that element, using the function 'del' and free. Finally, the pointer to the list must be set to NULL|
 |ft_lstiter|void ft_lstiter(t_list *lst, void (*f)(void *))| iterates the list 'lst' and appllies the function 'f' to content of each element|
 |ft_lstmap|t_list *ft_lstmap(t_list *lst, void *(*f)(void *), void(*del)(void *))| iterates the list 'lst' and appllies the function 'f' to content of each element. creates a new list resulting of the successive applications of the function 'f'. The 'del' function is used to delete the content of an element if needed |
+
+Some other functions was added to this library in order to be used in future projects

@@ -3,16 +3,16 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vscabell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vscabell <vscabell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 17:33:10 by vscabell          #+#    #+#             */
-/*   Updated: 2020/01/30 11:21:22 by vscabell         ###   ########.fr       */
+/*   Updated: 2020/06/09 18:29:27 by vscabell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	ft_c_in_set(char c, char const *set)
+static int	ft_isset(char c, char const *set)
 {
 	int i;
 
@@ -23,52 +23,24 @@ static int	ft_c_in_set(char c, char const *set)
 	return (0);
 }
 
-static int	ft_pref(char const *s, char const *set)
-{
-	int	i;
-	int	pi;
-
-	i = 0;
-	pi = 0;
-	while (s[i])
-	{
-		if (ft_c_in_set(s[i], set) == 1)
-			pi++;
-		else
-			return (pi);
-		i++;
-	}
-	return (pi);
-}
-
-static int	ft_suf(char const *s, char const *set)
-{
-	int	len;
-	int	pf;
-
-	pf = (int)ft_strlen(s) - 1;
-	len = pf;
-	while (len >= 0)
-	{
-		if (ft_c_in_set(s[len], set) == 1)
-			pf--;
-		else
-			return (pf);
-		len--;
-	}
-	return (pf);
-}
-
 char		*ft_strtrim(char const *s1, char const *set)
 {
-	int	pi;
-	int pf;
+	size_t	len;
+	char	*ptr;
+	size_t	i;
+	size_t	j;
 
 	if (!s1)
 		return (NULL);
-	pi = ft_pref(s1, set);
-	pf = ft_suf(s1, set);
-	if (pf < pi)
-		return (ft_substr(s1, 0, 0));
-	return (ft_substr(s1, pi, (pf - pi + 1)));
+	len = ft_strlen(s1);
+	i = 0;
+	while (ft_isset(s1[i], set))
+		i++;
+	if (i == len)
+		return (ft_strdup(""));
+	j = ft_strlen(s1) - 1;
+	while (ft_isset(s1[j], set))
+		j--;
+	ptr = ft_substr(s1, i, j - i + 1);
+	return (ptr);
 }

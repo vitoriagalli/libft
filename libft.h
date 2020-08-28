@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: vscabell <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: vscabell <vscabell@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 11:11:03 by vscabell          #+#    #+#             */
-/*   Updated: 2020/02/05 18:08:20 by vscabell         ###   ########.fr       */
+/*   Updated: 2020/08/04 19:00:55 by vscabell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,6 +43,7 @@ int					ft_isdigit(int c);
 int					ft_isalnum(int c);
 int					ft_isascii(int c);
 int					ft_isprint(int c);
+int					ft_isspace(int c);
 int					ft_toupper(int c);
 int					ft_tolower(int c);
 void				*ft_calloc(size_t count, size_t size);
@@ -67,5 +68,10 @@ void				ft_lstclear(t_list **lst, void (*del)(void*));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst, void *(*f)(void *),
 		void(*del)(void *));
+char				*ft_strjoin_n_free(char *s1, char *s2);
+void				*ft_calloc_char(size_t count, char c);
+char				*ft_itoa_base(int n, char *base, int size_base);
+void				ft_putnbr_base_fd(unsigned int n, char *base, int fd);
+void				ft_swap(int *a, int *b);
 
 #endif

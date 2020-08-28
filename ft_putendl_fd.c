@@ -6,7 +6,7 @@
 /*   By: vscabell <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/01/22 17:30:34 by vscabell          #+#    #+#             */
-/*   Updated: 2020/01/22 17:40:04 by vscabell         ###   ########.fr       */
+/*   Updated: 2020/06/09 18:16:30 by vscabell         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_putendl_fd(char *s, int fd)
 {
 	int i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{
